@@ -3,94 +3,145 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Página Demo | Dinero Fácil</title>
+  <title>Apps que te Dan Dinero en 2025</title>
 
-  <!-- Google Fonts + Icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Google Fonts + Icons (solo para maquetación inicial) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <!-- Estilos propios -->
-  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    :root {
+      --primario:#0d6efd;
+      --gris:#555;
+      --oscuro:#111;
+      --claro:#f5f5f5;
+      --radius:.75rem;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Poppins',sans-serif;color:var(--oscuro);line-height:1.6;background:#fff;scroll-behavior:smooth}
+    a{text-decoration:none;color:inherit}
+
+    /* ===== NAVBAR ===== */
+    .navbar{position:sticky;top:0;background:#fff;box-shadow:0 4px 12px rgba(0,0,0,.06);z-index:999}
+    .nav-container{display:flex;align-items:center;justify-content:space-between;width:min(90%,1200px);margin-inline:auto;padding:.75rem 0}
+    .logo{font-weight:700;font-size:1.5rem;color:var(--primario)}
+    .nav-links{display:flex;gap:1.25rem;align-items:center;font-size:.95rem;font-weight:500}
+    .nav-links img{width:24px;height:24px;margin-right:.35rem;vertical-align:middle}
+    .nav-links a{display:flex;align-items:center;color:var(--gris);transition:color .3s}
+    .nav-links a:hover{color:var(--primario)}
+
+    /* ===== HERO ===== */
+    .hero{background:var(--claro);padding:5rem 0;text-align:center}
+    .hero h1{font-size:clamp(2rem,5vw,3rem);font-weight:700;max-width:800px;margin-inline:auto}
+    .hero p{margin-top:1rem;color:var(--gris)}
+
+    /* ===== SECTIONS GENERALES ===== */
+    section.app-section{padding:3.5rem 0;border-bottom:1px solid #eee}
+    .section-content{display:flex;flex-wrap:wrap;gap:2rem;width:min(90%,1100px);margin-inline:auto;align-items:center}
+    .section-content img{flex:1 1 400px;max-width:480px;border-radius:var(--radius);box-shadow:0 8px 24px rgba(0,0,0,.08)}
+    .section-text{flex:1 1 350px}
+    .section-text h2{font-size:1.75rem;margin-bottom:1rem}
+    .section-text p{color:var(--gris);margin-bottom:1rem;text-align:justify}
+
+    /* ===== FOOTER ===== */
+    footer{background:var(--oscuro);color:#fff;padding:2rem 0;font-size:.9rem;text-align:center}
+  </style>
 </head>
 <body>
-  <!-- ======= Navegación ======= -->
+  <!-- ========== NAV ========== -->
   <header class="navbar">
-    <div class="container">
-      <a href="#" class="logo">DineroFácil</a>
-      <nav id="nav-menu" class="nav-links">
-        <a href="#inicio">Inicio</a>
-        <a href="#beneficios">Beneficios</a>
-        <a href="#galeria">Galería</a>
-        <a href="#contacto">Contacto</a>
+    <div class="nav-container">
+      <a class="logo" href="#">Dinero Apps 2025</a>
+      <nav class="nav-links">
+        <a href="#swagbucks"><img src="assets/swagbucks-logo.png" alt="Swagbucks logo">Swagbucks</a>
+        <a href="#honeygain"><img src="assets/honeygain-logo.png" alt="Honeygain logo">Honeygain</a>
+        <a href="#foap"><img src="assets/foap-logo.png" alt="Foap logo">Foap</a>
+        <a href="#opinion"><img src="assets/google-opinion-logo.png" alt="Opinion Rewards logo">Opinion Rewards</a>
+        <a href="#stepbet"><img src="assets/stepbet-logo.png" alt="StepBet logo">StepBet</a>
       </nav>
-      <button id="burger" class="burger"><i class="fa fa-bars"></i></button>
     </div>
   </header>
 
-  <!-- ======= Hero ======= -->
-  <section id="inicio" class="hero">
-    <div class="container">
-      <h1>Convierte tu tráfico en ingresos</h1>
-      <p>Aprende estrategias reales para monetizar con anuncios y afiliados.</p>
-      <a href="#beneficios" class="btn-primario">Ver cómo funciona</a>
-    </div>
+  <!-- ========== HERO ========== -->
+  <section class="hero">
+    <h1>Aplicaciones que te dan dinero <br>sin hacer casi nada en 2025</h1>
+    <p>Descubre las mejores apps para generar ingresos extra desde tu móvil.</p>
   </section>
 
-  <!-- ======= Beneficios ======= -->
-  <section id="beneficios" class="benefits">
-    <div class="container grid-3">
-      <article>
-        <i class="fa-solid fa-chart-line fa-2x"></i>
-        <h3>Ingresos pasivos</h3>
-        <p>Configura tus anuncios una vez y gana mientras duermes.</p>
-      </article>
-      <article>
-        <i class="fa-solid fa-gauge-high fa-2x"></i>
-        <h3>Carga ultrarrápida</h3>
-        <p>Nuestra plantilla pesa &lt; 50 KB de CSS+JS, perfecta para Core Web Vitals.</p>
-      </article>
-      <article>
-        <i class="fa-solid fa-mobile-screen-button fa-2x"></i>
-        <h3>100 % responsive</h3>
-        <p>Se ve impecable en móviles, tablets y escritorio.</p>
-      </article>
-    </div>
-  </section>
-
-  <!-- ======= Galería ======= -->
-  <section id="galeria" class="gallery">
-    <div class="container">
-      <h2 class="centro">Ejemplos de éxito</h2>
-      <div class="grid-3">
-        <img src="assets/demo1.webp" alt="Ejemplo 1" />
-        <img src="assets/demo2.webp" alt="Ejemplo 2" />
-        <img src="assets/demo3.webp" alt="Ejemplo 3" />
+  <!-- ========== APP SECTIONS ========== -->
+  <section id="swagbucks" class="app-section">
+    <div class="section-content">
+      <img src="assets/swagbucks-screenshot.webp" alt="Captura Swagbucks">
+      <div class="section-text">
+        <h2>Swagbucks</h2>
+        <p><strong>Qué es:</strong> Plataforma veterana de encuestas, vídeos y compras con cashback. Acumulas puntos (SB) que canjeas por PayPal o tarjetas regalo.</p>
+        <p><strong>Cómo funciona:</strong> Tras registrarte, elige tareas rápidas: ver vídeos, contestar encuestas breves o activar la extensión de compras. Cada acción suma puntos; 100 SB ≈ 1 USD. Con una dedicación ligera (10‑15 min/día) puedes retirar 25 USD cada mes.</p>
+        <p><strong>Truco 2025:</strong> El nuevo modo “Magic Receipts” paga hasta 2 USD por ticket de supermercado subido con IA que detecta productos.</p>
       </div>
     </div>
   </section>
 
-  <!-- ======= Contacto ======= -->
-  <section id="contacto" class="contact">
-    <div class="container">
-      <h2>¿Listo para empezar?</h2>
-      <form id="contact-form">
-        <input type="text" placeholder="Nombre" required />
-        <input type="email" placeholder="Correo" required />
-        <textarea placeholder="Mensaje" required></textarea>
-        <button type="submit" class="btn-primario">Enviar</button>
-      </form>
-      <p class="nota">Nos pondremos en contacto en menos de 24 h.</p>
+  <section id="honeygain" class="app-section">
+    <div class="section-content" style="flex-direction:row-reverse">
+      <img src="assets/honeygain-screenshot.webp" alt="Captura Honeygain">
+      <div class="section-text">
+        <h2>Honeygain</h2>
+        <p><strong>Qué es:</strong> Comparte tu ancho de banda no usado y gana créditos pasivamente. Honeygain revende ese tráfico a empresas de inteligencia de datos.</p>
+        <p><strong>Cómo funciona:</strong> Instalas la app en móvil o PC, la dejas correr. Por cada 10 GB compartidos recibes 1 USD. Conexiones 5G en 2025 generan ~30 GB diarios, así que podrías rondar 3 USD/día sin mover un dedo.</p>
+        <p><strong>Truco 2025:</strong> Activa el modo “Content Delivery” para ganar el doble cuando la red necesite almacenamiento en caché de vídeo.</p>
+      </div>
     </div>
   </section>
 
-  <!-- ======= Pie de página ======= -->
-  <footer class="footer">
-    <div class="container centro">
-      © 2025 DineroFácil · Hecho con ❤️ y anuncios
+  <section id="foap" class="app-section">
+    <div class="section-content">
+      <img src="assets/foap-screenshot.webp" alt="Captura Foap">
+      <div class="section-text">
+        <h2>Foap</h2>
+        <p><strong>Qué es:</strong> Marketplace de fotografía móvil. Sube tus fotos y marcas como Nivea, Volvo o Heineken pueden comprarlas por 10 USD cada una.</p>
+        <p><strong>Cómo funciona:</strong> Tras crear tu perfil, participa en misiones (concursos) patrocinadas. Una sola foto ganadora puede llevarse 200–500 USD.</p>
+        <p><strong>Truco 2025:</strong> Las misiones de video vertical (Reels/TikTok) pagan ahora el doble que las fotos estáticas.</p>
+      </div>
     </div>
+  </section>
+
+  <section id="opinion" class="app-section">
+    <div class="section-content" style="flex-direction:row-reverse">
+      <img src="assets/opinion-screenshot.webp" alt="Captura Google Opinion Rewards">
+      <div class="section-text">
+        <h2>Google Opinion Rewards</h2>
+        <p><strong>Qué es:</strong> App oficial de Google que te envía encuestas ultra‑cortas (1‑3 preguntas) y paga hasta 0,80 € cada una en saldo Play o PayPal (según país).</p>
+        <p><strong>Cómo funciona:</strong> Las encuestas se basan en tu historial de ubicaciones. Activa el GPS y revisa notificaciones: suelen llegar tras visitar tiendas físicas.</p>
+        <p><strong>Truco 2025:</strong> La integración con Google Wallet permite retirar el saldo directamente a tu banco sin comisiones en España y LATAM.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="stepbet" class="app-section">
+    <div class="section-content">
+      <img src="assets/stepbet-screenshot.webp" alt="Captura StepBet">
+      <div class="section-text">
+        <h2>StepBet</h2>
+        <p><strong>Qué es:</strong> Plataforma de apuestas de pasos: pagas una cuota (generalmente 10 USD) y, si cumples tus objetivos semanales de movimiento, recuperas tu dinero + parte del bote de los que fallan.</p>
+        <p><strong>Cómo funciona:</strong> Conecta tu reloj o app de salud y únete a retos de 6 semanas. La media de ganancia ronda 45 % sobre tu apuesta.</p>
+        <p><strong>Truco 2025:</strong> Los nuevos “Lightning Bets” de 24 h permiten doblar tu cuota con solo llegar a 15 000 pasos en un día.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer>
+    © 2025 Dinero Apps · Esta página usa ejemplos educativos y no afiliación oficial.
   </footer>
 
-  <!-- ======= Scripts ======= -->
-  <script src="js/main.js"></script>
+  <script>
+    // Scroll suave para nav (ya gestionado con CSS scroll-behavior, pero mantenemos compatibilidad Safari)
+    document.querySelectorAll('.nav-links a').forEach(el=>{
+      el.addEventListener('click',e=>{
+        const target=document.querySelector(el.getAttribute('href'));
+        if(target){e.preventDefault();target.scrollIntoView({behavior:'smooth'});}
+      });
+    });
+  </script>
 </body>
 </html>
