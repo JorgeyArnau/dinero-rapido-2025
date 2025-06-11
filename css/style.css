@@ -68,31 +68,6 @@ a{text-decoration:none;color:inherit}
   width: 100%;
 }
 
-.drop {
-  position: relative;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  top: 120%;
-  left: 0;
-  background-color: white;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-  min-width: 230px;
-}
-
-.dropdown-content a {
-  padding: 0.5rem 0;
-  color: var(--gris);
-  display: block;
-}
-
-.drop:hover .dropdown-content {
-  display: block;
-}
 
 /* ===== HERO ===== */
 .hero{position:relative;overflow:hidden;padding:5rem 0;text-align:center;color:#fff}
