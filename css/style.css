@@ -13,17 +13,82 @@ body{font-family:'Poppins',sans-serif;color:var(--oscuro);line-height:1.6;backgr
 a{text-decoration:none;color:inherit}
 
 /* ===== NAVBAR ===== */
-.navbar{position:sticky;top:0;width:100%;background:#fff;box-shadow:0 4px 12px rgba(0,0,0,.06);z-index:999}
-.nav-container{display:flex;align-items:center;justify-content:space-between;width:min(90%,1200px);margin-inline:auto;padding:.8rem 0}
-.logo{font-weight:700;font-size:1.5rem;color:var(--primario)}
-.nav-links{display:flex;gap:1.25rem;font-size:.95rem;font-weight:500;position:relative}
-.nav-links a{display:flex;align-items:center;color:var(--gris);padding:.25rem .5rem;transition:color .25s}
-.nav-links img{width:20px;height:20px;margin-right:.35rem}
-.nav-links a:hover{color:var(--primario)}
-.drop{position:relative}
-.dropdown-content{position:absolute;top:100%;left:0;background:#fff;border-radius:var(--radius);box-shadow:0 8px 18px rgba(0,0,0,.08);padding:1rem;display:none;min-width:230px}
-.dropdown-content a{display:flex;align-items:center;padding:.45rem 0;color:var(--gris)}
-.drop:hover .dropdown-content{display:block}
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(to right, #ffffff, #f4f4f4);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  z-index: 999;
+  padding: 1rem 0;
+  transition: background 0.3s ease;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--primario);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: var(--gris);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links img {
+  width: 22px;
+  height: 22px;
+  margin-right: 0.4rem;
+}
+
+.nav-links a:hover {
+  color: var(--primario);
+}
+
+.drop {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 120%;
+  left: 0;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  min-width: 230px;
+}
+
+.dropdown-content a {
+  padding: 0.5rem 0;
+  color: var(--gris);
+  display: block;
+}
+
+.drop:hover .dropdown-content {
+  display: block;
+}
 
 /* ===== HERO ===== */
 .hero{position:relative;overflow:hidden;padding:5rem 0;text-align:center;color:#fff}
